@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog xmlns="http://task1.kirova.htp.by">
+    <category Name="Movie">
+        <subCategory Name="Action">
+            <news Name="Avengers Producer Says Infinity War Is One Big CGI Scene" Provider="Joseph Holland" DateOfIssue="2018-01-01">
+                <NewsBody>
+                    Newly released commentary on Avengers: Infinity War reveals just how much of the film is CGI...
+                    and the answer may be even more than audieces might expect. Along with Avengers: Infinity War's home
+                    release, Marvel has created a ton of new material, including deleted scenes, audio commentary, and
+                    the
+                    "Beyond the Battle" featurettes, which explore the creation of key scenes in the film.
+                    This supplementary material contains wealth of new information about the third Avengers film.
+                </NewsBody>
+            </news>
+            <news Name="Boogeyman Pop Trailer Is Drenched in Skull-Crushing Depravity" Provider="Karl Bing" DateOfIssue="2018-01-01">
+                <NewsBody>
+                    The Boogeyman Pop teaser trailer is here. The upcoming horror anthology was produced independently
+                    and was made on a shoestring budget. When the movie was roughly 75 percent through filming, they
+                    had spent just $75 thousand, which, as director Brad Michael Elmore puts it, is the catering budget
+                    on many movies. Now, the general public is getting a look at what Elmore cooked up with this first
+                    full teaser, which looks like it's going to be bizarre, bloody and quite possibly a lot of fun.
+                </NewsBody>
+            </news>
+        </subCategory>
+        <subCategory Name="Thriller">
+            <news Name="Fan Gives Venom Eyeballs And The Photos Are Hilarious" Provider="Karl Bing" DateOfIssue="2018-01-01">
+                <NewsBody>
+                    While the latest trailer for the film displays Venom's chaotic and violent nature, the
+                    now-popular Twitter post by Matthew Gaydos reveals a sillier take on the character. With the
+                    caption, "But what if Venom had eyes?", this photo joins the conversation surrounding the
+                    character's appearance in the film, but adds a humorous sidebar to give fans a laugh after
+                    viewing the intense new footage.
+                </NewsBody>
+            </news>
+        </subCategory>
+    </category>
+    <category Name="Disc">
+        <subCategory Name="Rock">
+            <news Name="Muse 'Simulation Theory' Confirmed November 2018" Provider="Leslie Arkett" DateOfIssue="2018-01-01">
+                <NewsBody>
+                    Muse's eighth studio album, nicknamed by Dom the 'I Don't Wanna Ruin It For Everyone' album, is
+                    the proper follow up to Drones, will be released in 2018. The album deals with the themes of virtual
+                    reality, simulated reality and about 'the idea of fantasy becoming real', as mentioned by Matt in an
+                    interview, he also mentioned that another reason of writing this album was because 'simulations are
+                    becoming something that’s part of our everyday life.
+                </NewsBody>
+            </news>
+            <news Name="The Prodigy announce new album, No Tourists" Provider="Iris West-Allen" DateOfIssue="2018-01-01">
+                <NewsBody>
+                    The Prodigy are about to release their seventh album, No Tourists.
+                    No Tourists is due out on November 2nd on their own label Take Me To The Hospital, and it follows
+                    their last album, 2016's The Day Is My Enemy. According to the press release, this record focuses
+                    mostly on the band's core trio—Liam Howlett, Maxim and Keith Flint—without much in the way of outside
+                    collaborators.
+                </NewsBody>
+            </news>
+        </subCategory>
+    </category>
+    <category Name="Book">
+        <subCategory Name="Fantasy">
+            <news Name="Harry Potter latest: New chapter created using only predictive text is now circulating the internet" Provider="Camilla Rutherford" DateOfIssue="2018-01-01">
+                <NewsBody>
+                    A new chapter in the Harry Potter series has been created using a predictive keyboard -
+                    and it's perfect. Botnik Studios, a creative collective which describes itself as "a community of
+                    writers, artists and developers collaborating with machines to create strange new things", developed
+                    a predictive keyboard to craft sentences using an algorithm. According to Botnik co-founder Jamie Brew,
+                    The Predictive Writer scans text for patterns and then generates more text based on the previous words.
+                </NewsBody>
+            </news>
+        </subCategory>
+        <subCategory Name="Comics">
+            <news Name="First Look: Julie and Shawna Benson Take on Green Arrow" Provider="Lola Tesla" DateOfIssue="2018-01-01">
+                <NewsBody>
+                    GREEN ARROW #43 marks the debut of writers Julie and Shawna Benson and artist Javier Fernandez
+                    on the series, and it finds Ollie going strong in his mission to protect and fight for the people of
+                    his city. But he’s not the only one. A new vigilante called the Citizen has also taken up the charge,
+                    and it becomes clear pretty quickly that he’s no friend to Oliver Queen. Combine with Ollie and Dinah
+                    starting to get serious about their relationship and it’s clear that Green Arrow’s already complicated
+                    life is about to get…well, you can figure it out.
+                    But what we couldn’t figure out is what changes we could expect when the BATGIRL AND THE BIRDS OF PREY
+                    writers make the jump to GREEN ARROW. So, we sat down with them at San Diego Comic-Con to discuss all
+                    things Ollie, including what getting serious with Ollie means for Dinah, whether their debut story was
+                    inspired by real-world events and exactly what it would be like to work for Oliver Queen.
+                </NewsBody>
+            </news>
+            <news Name="The One TRUE Flash is Coming To DC Comics" Provider="Iris West-Allen" DateOfIssue="2018-01-01">
+                <NewsBody>
+                    The one true Flash, whoever that may be, is coming to the world DC Comics. Currently, DC Comics'
+                    solo The Flash series is in the middle of a storyline called "Flash War," which pits several Scarlet
+                    Speedsters against each other. The by.htp.kirova.task1.main conflict has been between Wally West, the original version,
+                    and his uncle, Barry Allen.
+                </NewsBody>
+            </news>
+        </subCategory>
+    </category>
+</catalog>
