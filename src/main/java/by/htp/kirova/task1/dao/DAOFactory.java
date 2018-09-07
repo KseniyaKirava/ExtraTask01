@@ -27,10 +27,10 @@ public final class DAOFactory {
 
 
 
-	private final JAXBParser jaxbDAO = new JAXBParserImpl();
+	private final JAXBParser jaxbParser = new JAXBParserImpl();
 
-	public JAXBParser getJaxbDAO() {
-		return jaxbDAO;
+	public JAXBParser getJaxbParser() {
+		return jaxbParser;
 	}
 
 }

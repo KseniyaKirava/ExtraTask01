@@ -46,7 +46,7 @@ public class Controller {
         //поиск по категории
         Criteria criteria2 = new Criteria();
         criteria2.addCriteria(SearchCriteria.News.CATEGORY_NAME, "Movie");
-        List<News> news2 = null;
+        List<News> news2;
         try {
             news2 = service.find(criteria2);
         } catch (ServiceException e) {

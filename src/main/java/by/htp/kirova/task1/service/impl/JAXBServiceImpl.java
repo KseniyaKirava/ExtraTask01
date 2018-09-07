@@ -10,10 +10,10 @@ public class JAXBServiceImpl implements JAXBService {
     @Override
     public Catalog readXml() throws ServiceException {
         DAOFactory daoFactory = DAOFactory.getInstance();
-        JAXBParser jaxbDAO = daoFactory.getJaxbDAO();
+        JAXBParser jaxbParser = daoFactory.getJaxbParser();
         Catalog catalog = null;
         try {
-            catalog = jaxbDAO.readXml();
+            catalog = jaxbParser.readXml();
         } catch (DAOException e) {
             throw new ServiceException("Read xml Jaxb Exception", e);
         }
@@ -24,9 +24,9 @@ public class JAXBServiceImpl implements JAXBService {
     @Override
     public void saveXml(Catalog catalog) throws ServiceException {
         DAOFactory daoFactory = DAOFactory.getInstance();
-        JAXBParser jaxbDAO = daoFactory.getJaxbDAO();
+        JAXBParser jaxbParser = daoFactory.getJaxbParser();
         try {
-            jaxbDAO.saveXml(catalog);
+            jaxbParser.saveXml(catalog);
             System.out.println("Changes in Catalog.xml saved");
         } catch (DAOException e) {
             throw new ServiceException("Save xml Jaxb Exception", e);

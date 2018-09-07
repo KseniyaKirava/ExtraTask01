@@ -2,6 +2,15 @@
 <catalog xmlns="http://task1.kirova.htp.by">
     <category name="Movie">
         <subCategory name="Action">
+            <news name="Bla bla bla" provider="Jodie K." dateOfIssue="2018-05-09">
+                <newsBody>Bla bla bla bla bla bla, bla bla</newsBody>
+            </news>
+            <news name="Bla bla bla" provider="Jodie K." dateOfIssue="2018-05-09">
+                <newsBody>Bla bla bla bla bla bla, bla bla</newsBody>
+            </news>
+            <news name="Bla bla bla" provider="Jodie K." dateOfIssue="2018-05-09">
+                <newsBody>Bla bla bla bla bla bla, bla bla</newsBody>
+            </news>
             <news name="Avengers Producer Says Infinity War Is One Big CGI Scene" provider="Joseph Holland" dateOfIssue="2018-01-01">
                 <newsBody>
                     Newly released commentary on Avengers: Infinity War reveals just how much of the film is CGI...
