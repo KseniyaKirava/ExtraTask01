@@ -5,7 +5,6 @@ import by.htp.kirova.task1.dao.DAOException;
 import by.htp.kirova.task1.entity.*;
 import by.htp.kirova.task1.entity.criteria.Criteria;
 import by.htp.kirova.task1.entity.criteria.SearchCriteria;
-import by.htp.kirova.task1.service.ServiceException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +15,7 @@ public class CatalogDAOImpl implements CatalogDAO {
 
     @Override
     public List<News> find(Criteria criteria) throws DAOException {
-        JAXBDAOImpl jaxbdaoImpl = new JAXBDAOImpl();
+        JAXBParserImpl jaxbdaoImpl = new JAXBParserImpl();
         Catalog catalog = jaxbdaoImpl.readXml();
         List<News> result = new ArrayList<>();
         for (Category category : catalog.getCategory()) {
@@ -36,47 +35,9 @@ public class CatalogDAOImpl implements CatalogDAO {
         return result;
     }
 
-    boolean isValidName(BaseEntity item, Criteria criteria, SearchCriteria.News nameKey) {
-
-        if (criteria.getCriteria().containsKey(nameKey)) {
-            Object value = criteria.getCriteria().get(nameKey);
-            return item.getName().equals(value);
-        }
-        return true;
-    }
-
-    boolean isValidNews(News item, Criteria criteria) {
-        for (Map.Entry<SearchCriteria.News, Object> cr :
-                criteria.getCriteria().entrySet()) {
-            switch (cr.getKey()) {
-                case NAME:
-                    if (!item.getName().equals(cr.getValue())) {
-                        return false;
-                    }
-                    break;
-                case PROVIDER:
-                    if (!item.getProvider().equals(cr.getValue())) {
-                        return false;
-                    }
-                    break;
-                case NEWS_BODY:
-                    if (!item.getNewsBody().equals(cr.getValue())) {
-                        return false;
-                    }
-                    break;
-                case DATE_OF_ISSUE:
-                    if (!item.getDateOfIssue().equals(cr.getValue())) {
-                        return false;
-                    }
-                    break;
-            }
-        }
-        return true;
-    }
-
     @Override
     public News add(Criteria criteria) throws DAOException {
-        JAXBDAOImpl jaxbdaoImpl = new JAXBDAOImpl();
+        JAXBParserImpl jaxbdaoImpl = new JAXBParserImpl();
         Catalog catalog = jaxbdaoImpl.readXml();
         List<Category> category = catalog.getCategory();
 
@@ -120,7 +81,50 @@ public class CatalogDAOImpl implements CatalogDAO {
         return result;
     }
 
-    <T extends BaseEntity> T getFirstItem(List<T> items, Criteria criteria,
+
+
+
+
+    private boolean isValidName(BaseEntity item, Criteria criteria, SearchCriteria.News nameKey) {
+        if (criteria.getCriteria().containsKey(nameKey)) {
+            Object value = criteria.getCriteria().get(nameKey);
+            return item.getName().equals(value);
+        }
+        return true;
+    }
+
+    private boolean isValidNews(News item, Criteria criteria) {
+        for (Map.Entry<SearchCriteria.News, Object> cr :
+                criteria.getCriteria().entrySet()) {
+            switch (cr.getKey()) {
+                case NAME:
+                    if (!item.getName().equals(cr.getValue())) {
+                        return false;
+                    }
+                    break;
+                case PROVIDER:
+                    if (!item.getProvider().equals(cr.getValue())) {
+                        return false;
+                    }
+                    break;
+                case NEWS_BODY:
+                    if (!item.getNewsBody().equals(cr.getValue())) {
+                        return false;
+                    }
+                    break;
+                case DATE_OF_ISSUE:
+                    if (!item.getDateOfIssue().equals(cr.getValue())) {
+                        return false;
+                    }
+                    break;
+            }
+        }
+        return true;
+    }
+
+
+
+    private <T extends BaseEntity> T getFirstItem(List<T> items, Criteria criteria,
                                           SearchCriteria.News nameKey) {
         Map<SearchCriteria.News, Object> searchCriteria = criteria.getCriteria();
         if (!searchCriteria.containsKey(nameKey)) {

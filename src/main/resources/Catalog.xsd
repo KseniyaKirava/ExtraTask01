@@ -13,20 +13,20 @@
         <sequence>
             <element name="subCategory" type="trg:SubCategory" minOccurs="0" maxOccurs="unbounded"/>
         </sequence>
-        <attribute type="string" name="Name"/>
+        <attribute type="string" name="name"/>
     </complexType>
     <complexType name="SubCategory">
         <sequence>
             <element name="news" type="trg:News" minOccurs="0" maxOccurs="unbounded"/>
         </sequence>
-        <attribute type="string" name="Name"/>
+        <attribute type="string" name="name"/>
     </complexType>
     <complexType name="News">
         <sequence>
-            <element type="string" name="NewsBody"/>
+            <element type="string" name="newsBody"/>
         </sequence>
-        <attribute type="string" name="Name"/>
-        <attribute type="string" name="Provider"/>
-        <attribute type="string" name="DateOfIssue"/>
+        <attribute type="string" name="name"/>
+        <attribute type="string" name="provider"/>
+        <attribute type="string" name="dateOfIssue"/>
     </complexType>
 </schema>

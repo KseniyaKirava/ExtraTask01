@@ -9,6 +9,7 @@ import by.htp.kirova.task1.service.ServiceException;
 import by.htp.kirova.task1.service.CatalogService;
 import by.htp.kirova.task1.service.validation.Validator;
 
+import java.util.Collections;
 import java.util.List;
 
 public class CatalogServiceImpl implements CatalogService {
@@ -17,7 +18,7 @@ public class CatalogServiceImpl implements CatalogService {
     public List<News> find(Criteria criteria) throws ServiceException {
         if (!Validator.criteriaValidator(criteria)) {
             System.out.println("The entered data does not correspond to the format");
-            return null;
+            return Collections.emptyList();
         }
 
         DAOFactory factory = DAOFactory.getInstance();
@@ -38,19 +39,25 @@ public class CatalogServiceImpl implements CatalogService {
             System.out.println("The entered data does not correspond to the format");
             return null;
         }
+
+
         DAOFactory factory = DAOFactory.getInstance();
         CatalogDAO catalogDAO = factory.getCatalogDAO();
 
-        News news = null;
+        News news;
+
         try {
             news = catalogDAO.add(criteria);
         } catch (DAOException e) {
             throw new ServiceException("Add operation to xml throw catalogDAO ending with Exception", e);
         }
+
         if (news == null) {
             System.out.println("There are not enough criteria for a specific add-on");
             return null;
         }
+
+
         return news;
     }
 }

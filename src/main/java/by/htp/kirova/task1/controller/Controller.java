@@ -21,15 +21,9 @@ public class Controller {
         Catalog catalog = null;
         try {
             catalog = jaxbService.readXml();
-        } catch (ServiceException e) {
-            System.out.println("Operation readXml failed");
-            throw new ControllerException("Operation readXml failed", e);
-        }
-        try {
             jaxbService.saveXml(catalog);
         } catch (ServiceException e) {
-            System.out.println("Operation saveXml failed");
-            throw new ControllerException("Operation saveXml failed", e);
+            throw new ControllerException("Operation readXml/saveXml failed", e);
         }
 
 
@@ -40,11 +34,11 @@ public class Controller {
         Criteria criteria = new Criteria();
         criteria.addCriteria(SearchCriteria.News.NAME, "The One TRUE Flash is Coming To DC Comics");
         criteria.addCriteria(SearchCriteria.News.PROVIDER, "Iris West-Allen");
-        List<News> news = null;
+        List<News> news;
         try {
             news = service.find(criteria);
         } catch (ServiceException e) {
-            throw new ControllerException(e);
+            throw new ControllerException("Execution list of news is failed", e);
         }
         PrintNews.print(news);
         System.out.println("________________________________________________________________________________________");

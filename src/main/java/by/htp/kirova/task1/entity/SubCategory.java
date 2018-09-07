@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlType;
 public class SubCategory implements BaseEntity {
 
     protected List<News> news;
-    @XmlAttribute(name = "Name")
+    @XmlAttribute(name = "name")
     protected String name;
 
     /**

@@ -38,13 +38,13 @@ import java.util.Objects;
 })
 public class News implements BaseEntity {
 
-    @XmlElement(name = "NewsBody", required = true)
+    @XmlElement(name = "newsBody", required = true)
     protected String newsBody;
-    @XmlAttribute(name = "Name")
+    @XmlAttribute(name = "name")
     protected String name;
-    @XmlAttribute(name = "Provider")
+    @XmlAttribute(name = "provider")
     protected String provider;
-    @XmlAttribute(name = "DateOfIssue")
+    @XmlAttribute(name = "dateOfIssue")
     @XmlSchemaType(name = "date")
     protected String dateOfIssue;
 

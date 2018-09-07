@@ -2,26 +2,34 @@ package by.htp.kirova.task1.dao;
 
 
 import by.htp.kirova.task1.dao.impl.CatalogDAOImpl;
-import by.htp.kirova.task1.dao.impl.JAXBDAOImpl;
+import by.htp.kirova.task1.dao.impl.JAXBParserImpl;
 
 public final class DAOFactory {
 	private static final DAOFactory instance = new DAOFactory();
 
-	private final CatalogDAO catalogDAO = new CatalogDAOImpl();
-	
 	private DAOFactory() {}
-
-	public CatalogDAO getCatalogDAO() {
-		return catalogDAO;
-	}
 
 	public static DAOFactory getInstance() {
 		return instance;
 	}
 
-	private final JAXBDAO jaxbDAO = new JAXBDAOImpl();
 
-	public JAXBDAO getJaxbDAO() {
+
+
+
+	private final CatalogDAO catalogDAO = new CatalogDAOImpl();
+
+	public CatalogDAO getCatalogDAO() {
+		return catalogDAO;
+	}
+
+
+
+
+
+	private final JAXBParser jaxbDAO = new JAXBParserImpl();
+
+	public JAXBParser getJaxbDAO() {
 		return jaxbDAO;
 	}
 
